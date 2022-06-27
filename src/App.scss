@@ -1,0 +1,152 @@
+$backgroundBase: #619e9e;
+$darkAccent: #224b4b;
+$lightAccent: #2cda9d;
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+$default-border: 1px solid darken($backgroundBase, 35%);
+
+.colorScheme {
+  background-color: lighten($backgroundBase, 30%);
+  border: $default-border;
+  box-shadow: $shadow;
+  border-top: none;
+}
+
+.editor-wrap {
+  max-width: 600px;
+  margin: 1.125rem auto;
+
+  .toolbar {
+    width: 99%;
+  }
+
+  textarea {
+    @extend .colorScheme;
+    width: 99%;
+    min-height: 200px;
+    margin-bottom: -5px;
+    resize: vertical;
+    outline: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 0.875rem;
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #4aa3a3;
+  padding: 0.3rem;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  font-family: Russo One;
+  font-size: 1rem;
+  color: black;
+
+  i {
+    width: 25px;
+    margin-left: 5px;
+  }
+
+  .fa-xmark,
+  .fa-maximize,
+  .fa-minimize {
+    margin-left: auto;
+
+    &:hover {
+      color: lighten($lightAccent, 10%);
+      cursor: pointer;
+    }
+  }
+
+  .fa-pencil {
+    margin-right: 3px;
+  }
+}
+
+.converter {
+  width: 100px;
+  text-align: center;
+  font-size: 35px;
+  margin: auto;
+}
+
+.preview-wrap {
+  @extend .colorScheme;
+  max-width: 800px;
+  margin: 1.25rem auto;
+  min-height: 200px;
+  overflow-wrap: break-word;
+}
+
+.maximized {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+
+  textarea {
+    min-height: 95vh;
+    resize: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+// MARKDOWN STYLES
+.preview {
+  padding: 0 1rem;
+
+  blockquote {
+    border-left: 3px solid #224b4b;
+    color: #224b4b;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  code {
+    background: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  h1 {
+    border-bottom: 2px solid $darkAccent;
+  }
+
+  h2 {
+    border-bottom: 1px solid $darkAccent;
+  }
+
+  table {
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+  img {
+    background-color: transparent;
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
+
+.wmde-markdown {
+  background-color: lighten($backgroundBase, 30%);
+  padding: 5px;
+  margin: 15px;
+
+  table {
+
+    tr,
+    tr:nth-child(2n) {
+      background-color: transparent;
+    }
+
+    th,
+    td {
+      border: 2px solid $darkAccent;
+    }
+  }
+}
