@@ -51,7 +51,7 @@ const placeholder = `# Welcome to my React Markdown Previewer!
 
 Heres some code, \`<div></div>\`, between 2 backticks.
 
-\`\`\`
+\`\`\`javascript
 // this is multi-line code:
 
 function anotherExample(firstLine, lastLine) {
